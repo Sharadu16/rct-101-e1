@@ -1,3 +1,14 @@
 .addTask {
-  /* Sample */
+  
+}
+.input{
+  padding:20px 100px;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+.addButton{
+  width:80px;
+  height:67px;
 }

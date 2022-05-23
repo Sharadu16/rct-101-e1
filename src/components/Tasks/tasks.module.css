@@ -1,7 +1,13 @@
 .tasks {
-  /* sample */
+  cursor: pointer;
+  display: flex;
 }
-
+.updateIcon{
+  padding: 50px;
+}
+.material-symbols-sharp{
+  padding-left: 100px;
+}
 .empty {
   /* sample */
 }
