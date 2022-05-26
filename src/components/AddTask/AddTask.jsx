@@ -19,6 +19,12 @@ const AddTask = () => {
     setItem("");
   }
 
+  const deleteItem = (id) => {
+    const updatedItems = newItem.filter((elem,index) => {
+      return index !== id;
+    })
+  }
+
   return (
     <div className={styles.todoForm}>
     
@@ -28,10 +34,20 @@ const AddTask = () => {
       <Button className={styles.addButton} data-cy="add-task-button" variant="contained" href="#contained-buttons" onClick={listOfItems}>Add</Button>
       <br/>
       <div>
-        
         {
           newItem.map((val,index) => {
              return <Tasks key={index} task = {val}/>
+          })
+        }
+      </div>
+      <div>
+        {
+          newItem.map((val, index) => {
+             return <div>
+                <p>{val}</p>
+                <button onClick={() => deleteItem(index)}>delete</button>
+             </div>
+            
           })
         }
       </div>

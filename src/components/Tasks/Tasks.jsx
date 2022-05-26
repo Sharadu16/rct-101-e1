@@ -9,6 +9,12 @@ const Tasks = (props) => {
   const cutIt = () => {
     setLine(true);
   }
+
+  const deleteItem = (id) => {
+      const updatedItems = newItem.filter((elem,ind) => {
+        return ind !== id;
+      })
+  }
   
   return (
     <>
@@ -17,7 +23,7 @@ const Tasks = (props) => {
           <p style={{textDecoration: line ? "Line-through" : "none"}}>{props.task}</p>
           <div style={{paddingLeft:"20px"}}>
             <span style={{paddingLeft:"20px", paddingTop:"10px"}} class="material-symbols-sharp" onClick={cutIt}>task_alt</span>
-            <span style={{paddingLeft:"20px", paddingTop:"10px"}} class="material-symbols-sharp" >delete</span>
+            <span style={{paddingLeft:"20px", paddingTop:"10px"}} class="material-symbols-sharp" onClick={() => deleteItem(ind)}>delete</span>
           </div>
           
       </ul>
