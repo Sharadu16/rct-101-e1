@@ -10,12 +10,6 @@ const Tasks = (props) => {
     setLine(true);
   }
 
-  const deleteItem = (id) => {
-      const updatedItems = newItem.filter((elem,ind) => {
-        return ind !== id;
-      })
-  }
-  
   return (
     <>
       <ul data-cy="tasks" className={styles.tasks}>
